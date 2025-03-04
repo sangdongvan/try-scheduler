@@ -1,0 +1,19 @@
+{
+  "name": "try-scheduler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "app0": "ts-node ./src/run.ts 0",
+    "app1": "ts-node ./src/run.ts 1",
+    "dapr0": "dapr run --app-id try-scheduler --app-protocol http --app-port 4600 --dapr-http-port 3500 --components-path ./components",
+    "dapr1": "dapr run --app-id try-scheduler --app-protocol http --app-port 4601 --dapr-http-port 3501 --components-path ./components"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@dapr/dapr": "^3.5.2"
+  }
+}
